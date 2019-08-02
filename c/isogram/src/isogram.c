@@ -7,16 +7,17 @@
 bool is_isogram(const char phrase[])
 {
 	bool occurs[26] = {false};
+	int n;
 
 	if(phrase != NULL)
 	{	
 		for(int i=0; phrase[i]; i++)
 		{
-			const char c=toupper(phrase[i]); 
+			char c=toupper(phrase[i]); 
 
 			if(isalpha(c))
 			{
-				const int n=c-'A'; 
+				n=c-'A'; 
 		
 				if(occurs[n])
 				{
